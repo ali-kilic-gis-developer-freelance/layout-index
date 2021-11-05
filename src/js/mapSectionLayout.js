@@ -95,8 +95,8 @@ Pafta.prototype.set=function (scale) {
     var box = this.paftalar[ust].bbox;
     var farken =en-box.leftBottom.lat;
     var farkboy=bo-box.leftBottom.lng;
-    var boyint = parseInt(farkboy/kendi.width);
-    var enint = parseInt(farken/kendi.height);
+    var boyint = Math.trunc(farkboy/kendi.width);
+    var enint = Math.trunc(farken/kendi.height);
     var solAltBoy = box.leftBottom.lng+(boyint*kendi.width);
     var solAltEn = box.leftBottom.lat+(enint*kendi.height);
     if(this.lng>=0 && this.lat>=0){
